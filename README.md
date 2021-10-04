@@ -4,7 +4,7 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/Brktrlw/E-Trade-System-With-Python-Flask">
+  <a href="https://github.com/Brktrlw/Social-Media-With-Python-Flask">
     <img src="/images/icon.ico" alt="Logo" width="140" height="140">
   </a>
 
@@ -90,7 +90,7 @@ Bu yazılım GNU GENERAL PUBLIC Lisansı ile korunmaktadır. Daha fazla bilgi i�
 
 E-Mail Adresi:E-Mail - brktrl@protonmail.ch
 
-Proje Linki: [https://github.com/Brktrlw/E-Trade-System-With-Python-Flask](https://github.com/Brktrlw/E-Trade-System-With-Python-Flask)<br>
+Proje Linki: [https://github.com/Brktrlw/Social-Media-With-Python-Flask](https://github.com/Brktrlw/Social-Media-With-Python-Flask)<br>
 Web Site Linki: [http://www.berkay.rf.gd/](http://www.berkay.rf.gd/)
 
 
