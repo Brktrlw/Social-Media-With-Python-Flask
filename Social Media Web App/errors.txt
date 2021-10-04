@@ -1,0 +1,8 @@
+no such table: Usaers 2021-10-02 15:14:26.109855
+no such table: Usaers 2021-10-02 15:14:27.572221
+no such table: Usaers 2021-10-02 15:14:51.535629
+near "froms": syntax error 2021-10-02 15:16:06.735895
+near "froms": syntax error 2021-10-02 15:16:10.921042
+no such column: asdfasd 2021-10-02 17:28:21.919632
+no such column: brktrl 2021-10-02 17:28:30.180077
+no such column: brktrl 2021-10-02 17:28:43.796359
