@@ -49,12 +49,12 @@
 
 ## Program-Hakkında
 
-**Klasik bir e ticaret sisteminde temel olan tüm opsiyonları Python'un flask kütüphanesi ile geliştirilmiş olup sistemlere özgü bir şekilde kullanılması amaçlanmıştır.Sadece bir veritabanına bağlı kalmayıp tek kod değişikliği ile tüm veritabanlarına geçiş yapılabilir.**
+**Bir sosyal medya sistemindeki temelde olan tüm özelliklere sahip olup ( Post paylaşımı arkadaşlık isteği gönderme,beğeni yorum yapma ve daha bir çoğu...) pythonun flask kütüphanesi ile geliştirilmekte olan bir sistemdir**
 
 
 `BrktrLawliet`,
 `brktrl@protonmail.ch`
-`E Trade System`
+`Social Media System`
 
 
 ### Ne-İle-Geliştirildi
@@ -65,9 +65,6 @@
 * [MySQL](https://www.mysql.com)
 
 ## Başlangıç
-
-Kurulumda Windows işletim sistemleri için sadece setup dosyasını indirip kurmanız yeterli olacaktır.
-
 
 ## Kullanım
 
