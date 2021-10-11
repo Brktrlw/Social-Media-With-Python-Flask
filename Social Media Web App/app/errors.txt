@@ -6,3 +6,15 @@ near "froms": syntax error 2021-10-02 15:16:10.921042
 no such column: asdfasd 2021-10-02 17:28:21.919632
 no such column: brktrl 2021-10-02 17:28:30.180077
 no such column: brktrl 2021-10-02 17:28:43.796359
+no such column: (1,) 2021-10-11 21:54:39.670711
+no such column: (1,) 2021-10-11 21:54:41.046397
+no such column: (1,) 2021-10-11 21:56:00.910763
+no such column: (1,) 2021-10-11 21:56:13.664626
+no such column: (1,) 2021-10-11 21:56:50.327710
+no such column: (1,) 2021-10-11 21:56:51.932837
+no such column: shrov 2021-10-11 21:58:24.250928
+no such column: (1,) 2021-10-11 21:58:41.599118
+no such column: (1,) 2021-10-11 21:58:43.933800
+near ")": syntax error 2021-10-11 21:59:15.568026
+database is locked 2021-10-11 21:59:30.257611
+database is locked 2021-10-11 21:59:45.142286

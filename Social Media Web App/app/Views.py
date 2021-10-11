@@ -46,6 +46,13 @@ def userPage(usernickname):
         else:
             return render_template("user.html",userData=userData[0])
 
+@app.route("/removeFriend",methods=["POST"])
+def removeFriend():
+    userId=UserManager.getUserIdByUserNickName(session["username"])
+    user2Id=request.form.get("userId")
+    FriendsManager.removeFriendByUsersId(userId[0][0],user2Id)
+    return redirect(request.referrer)
+
 @app.route("/addFriendRequest",methods=["POST"])
 def addFriendRequest():
     userId=UserManager.getUserIdByUserNickName(session["username"])

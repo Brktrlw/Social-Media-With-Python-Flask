@@ -71,3 +71,16 @@ class FriendsManager():
             print(f'%s%s {e} !!! %s' % (fg('white'), bg('red'), attr('reset')))
         finally:
             connection.close()
+    @staticmethod
+    def removeFriendByUsersId(user1,user2):
+        try:
+            connection=sqlite3.connect("Database.db")
+            cursor=connection.cursor()
+            cursor.execute(f"DELETE FROM Friends where userId1={user1} and userId2={user2} or userId1={user2} and userId2={user1}")
+            print("çalıstı")
+            connection.commit()
+        except Exception as e:
+            FileErrorLogger.FileLogger(e)
+            print(f'%s%s {e} !!! %s' % (fg('white'), bg('red'), attr('reset')))
+        finally:
+            connection.close()

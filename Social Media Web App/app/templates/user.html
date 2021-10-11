@@ -32,10 +32,12 @@
                         <h4 class="m-t-10 m-b-5">{{userData.UserNickName}}</h4>
                         <p class="m-b-10">{{userData.UserAbout}}</p>
                         {% if friendStatus==True %}
-                        <a href="#" class="btn btn-primary btn-rounded"><i class="fa fa-minus" aria-hidden="true"></i> Arkadaşlıktan Çıkart</a>&nbsp;
+                           <button class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#exampleModal">
+                              <i class="fa fa-minus" aria-hidden="true"></i> Arkadaşlıktan Çıkart</button>&nbsp;
+
                         {% elif arkadaslikGondermismi==True %}
                            <form action="{{url_for('deleteFriendRequest')}}" style="display:inline" method="post">
-                            <input type="hidden" value="{{userData.UserId}}">
+                            <input type="hidden" value="{{userData.UserId}}" name="userId">
                            <button class="btn btn-primary btn-rounded" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> İstek Gönderildi</button>&nbsp;
                            </form>
                         {% else %}
@@ -271,8 +273,28 @@
 </div>
                {%endif%}
 
-
-
+                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                           <div class="modal-dialog" role="document">
+                           <div class="modal-content">
+                           <div class="modal-header">
+                             <h5 class="modal-title" id="exampleModalLabel">Arkadaşlıktan Çıkart</h5>
+                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                             </button>
+                           </div>
+                           <div class="modal-body">
+                             Arkadaşınızı listeden çıkartmak istediğinizden emin misiniz?
+                           </div>
+                           <div class="modal-footer">
+                              <form action="{{url_for('removeFriend')}}" method="post">
+                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                             <button type="submit" class="btn btn-danger">{{ userData.UserNickName.capitalize() }}'i Arkadaşlıktan Çıkart</button>
+                           </div>
+                           </div>
+                           </div>
+                           </div>
+                           <input type="hidden" value="{{userData.UserId}}" name="userId">
+                           </form>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 </body>
