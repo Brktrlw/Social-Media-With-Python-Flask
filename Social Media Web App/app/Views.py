@@ -1,5 +1,4 @@
-from flask import Flask,render_template,flash,redirect,url_for,session,logging,request
-from flask_mysqldb import MySQL
+from flask import Flask,render_template,flash,redirect,url_for,session, request
 from userManager import UserManager
 from functools import wraps
 import logging
@@ -55,7 +54,7 @@ def addFriendRequest():
 @app.route("/")
 def ignoreFriendRequest():
     pass
-######
+########
 
 @app.route("/deleteFriendRequest",methods=["POST"])
 def deleteFriendRequest():

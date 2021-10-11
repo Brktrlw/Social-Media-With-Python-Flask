@@ -1,7 +1,7 @@
 import sqlite3
 from fileLogger import FileErrorLogger
 from colored import fg, bg, attr
-from BaseDataBaseManager import DataBaseManager
+
 
 class FriendsManager():
     @staticmethod
