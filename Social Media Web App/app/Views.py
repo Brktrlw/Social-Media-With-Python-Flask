@@ -3,12 +3,11 @@ from userManager import UserManager
 from functools import wraps
 import logging
 from friendsManager import FriendsManager
-
+from itsdangerous import Signer
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
-
 app=Flask(__name__)
-app.secret_key = 'super secret key'
+app.secret_key = '£#$½3y45#$½#$½74½$½456ju$½$½6u$½$½[$½68$½$½6u4½rtg€₺u$½u3456yu345u3'
 
 # Kullanıcı giriş decaratörü
 def login_required(f):
