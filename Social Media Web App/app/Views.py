@@ -1,4 +1,4 @@
-from flask import Flask,render_template,flash,redirect,url_for,session, request
+from flask import Flask,render_template,flash,redirect,url_for,session, request,make_response
 from userManager import UserManager
 from functools import wraps
 import logging
@@ -23,7 +23,9 @@ def login_required(f):
 
 @app.route("/")
 def homePage():   #Ana Sayfaya gider
-    return render_template("homepage.html")
+    response=make_response(render_template("homepage.html"))
+    response.set_cookie("name","berkay")
+    return response
 
 @app.route("/User/<string:usernickname>")
 @login_required
