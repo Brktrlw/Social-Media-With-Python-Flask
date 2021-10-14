@@ -17,15 +17,21 @@ def login_required(f):
             return f(*args, **kwargs)
         else:
             flash("Lütfen giriş yapınız")
-            return redirect(url_for("loginPage"))
+            return redirect(url_for("loginpage"))
     return decorated_function
+
+@app.route("/addPost",methods=["POST"])
+@login_required
+def addPost():
+    message=request.form.get("message")
+    print(message)
+    return redirect(request.referrer)
 
 @app.route("/")
 def homePage():   #Ana Sayfaya gider
     response=make_response(render_template("homepage.html"))
     response.set_cookie("name","berkay")
     return response
-
 @app.route("/Error")
 def errorPage():
     return render_template("errorpage.html")
