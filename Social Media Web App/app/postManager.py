@@ -8,6 +8,7 @@ class PostManager():
         try:
             connection = sqlite3.connect("Database.db")
             cursor = connection.cursor()
+            
             #cursor.execute(f"INSERT INTO Posts (PostTitle,PostDescription,PostLike,PostDate,CategorieId) VALUES ('{}','{}','{}','{}','{}','{}','')")
             connection.commit()
         except Exception as e:
