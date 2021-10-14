@@ -17,7 +17,7 @@ def login_required(f):
             return f(*args, **kwargs)
         else:
             flash("Lütfen giriş yapınız")
-            return redirect(url_for("homePage"))
+            return redirect(url_for("loginPage"))
     return decorated_function
 
 @app.route("/")
@@ -25,6 +25,10 @@ def homePage():   #Ana Sayfaya gider
     response=make_response(render_template("homepage.html"))
     response.set_cookie("name","berkay")
     return response
+
+@app.route("/Error")
+def errorPage():
+    return render_template("errorpage.html")
 
 @app.route("/User/<string:usernickname>")
 @login_required
@@ -83,14 +87,14 @@ def loginPage():
         else:
             session["logged_in"]=True
             session["username"]=userNickName
-            return render_template("homepage.html")
+            return redirect(url_for("homePage"))
     else:
         return render_template("login.html")
 
 @app.route("/Logout")
 def logout():
     session.clear()
-    return render_template("homepage.html")
+    return redirect(url_for("homePage"))
 
 
 

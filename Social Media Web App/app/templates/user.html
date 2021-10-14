@@ -10,6 +10,19 @@
    </head>
    <body>
       {% include "navbar.html"%}
+      {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+
+    <div class="alert danger-alert">
+  <h3>{{ message }}</h3>
+  </div>
+
+
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
       <div class="container">
          <div class="row">
             <div class="col-md-12">
