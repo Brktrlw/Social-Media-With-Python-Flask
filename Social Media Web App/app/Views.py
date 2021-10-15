@@ -27,6 +27,13 @@ def addPost():
     print(message)
     return redirect(request.referrer)
 
+###s
+@app.route("/addComment",methods=["POST"])
+@login_required
+def addComment():
+    pass
+###s
+
 @app.route("/")
 def homePage():   #Ana Sayfaya gider
     response=make_response(render_template("homepage.html"))
